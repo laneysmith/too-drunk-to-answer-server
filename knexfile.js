@@ -1,10 +1,9 @@
 require('dotenv').config();
 
 module.exports = {
-
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/answers'
+    connection: 'postgres://localhost/' + process.env.DATABASE_NAME
   },
   production: {
     client: 'pg',

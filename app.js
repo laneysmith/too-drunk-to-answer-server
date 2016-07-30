@@ -8,11 +8,11 @@ var api = require('./api/index');
 
 var app = express();
 
+app.use(express.static('./doc'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static('./doc'); // we will add an api documentation folder later & people will see that when they go to the website
 
 app.use('/api', api);
 
